@@ -9,7 +9,7 @@ import Button from '../../Button';
 import Checkbox from '../../Checkbox';
 import i18n from '../../../i18n';
 import { useStore } from '@tanstack/react-store';
-import { store } from '@renderer/store';
+import { store,dispatch } from '@renderer/store';
 
 const second = i18n.t('settingsPage.second');
 const seconds = i18n.t('settingsPage.second_other');
@@ -88,7 +88,11 @@ const AudioPlaybackSettings = () => {
                   onChange={(e) => {
                     const val = e.currentTarget.valueAsNumber;
                     setPlaybackRateInterval(val);
-                    storage.playback.setPlaybackOptions('playbackRate', val);
+                    //storage.playback.setPlaybackOptions('playbackRate', val);
+                    dispatch({
+                      type: 'UPDATE_PLAYBACK_RATE',
+                      data: val
+                    });
                   }}
                   style={playbackRateSeekBarCssProperties}
                   title={`${playbackRateInterval}x`}
@@ -103,7 +107,12 @@ const AudioPlaybackSettings = () => {
               isDisabled={playbackRateInterval === 1}
               clickHandler={() => {
                 setPlaybackRateInterval(1);
-                storage.playback.setPlaybackOptions('playbackRate', 1);
+                dispatch({ type: 'UPDATE_PLAYBACK_RATE', data: 1 });
+                //storage.playback.setPlaybackOptions('playbackRate', 1);
+                dispatch({
+                  type: 'UPDATE_PLAYBACK_RATE',
+                  data: 1
+                });
               }}
             />
           </div>

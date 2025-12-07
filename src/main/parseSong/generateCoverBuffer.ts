@@ -50,7 +50,10 @@ export const generateCoverBuffer = async (
       }
     }
 
-    if (cover[0].format === 'image/webp') {
+    if (Array.isArray(cover)) {
+      return undefined;
+    }
+    /*if (cover[0].format === 'image/webp') {
       try {
         const buffer = await sharp(cover[0].data).png().toBuffer();
         return buffer;
@@ -58,10 +61,9 @@ export const generateCoverBuffer = async (
         logger.debug('Failed to get artwork buffer of a song.', { error });
         return getDefaultSongCoverImgBuffer();
       }
-    }
-
+    }*/
     // return cover[0].data;
-    return Buffer.from(cover[0].data.buffer, 0, cover[0].data.length);
+    //return Buffer.from(cover[0].data.buffer, 0, cover[0].data.length);
   }
 
   return getDefaultSongCoverImgBuffer();

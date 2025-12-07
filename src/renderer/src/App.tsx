@@ -335,6 +335,8 @@ export default function App() {
         data: false
       });
       window.api.playerControls.songPlaybackStateChange(false);
+      // 👈 调用封装的方法
+      saveCurrentPlaybackProgress();
     };
 
     player.addEventListener('error', handlePlayerErrorEvent);
@@ -1188,33 +1190,96 @@ export default function App() {
     [toggleShuffling]
   );
 
+  /*const updateSongPosition = useCallback((position: number) => {
+    if (position >= 0 && position <= player.duration) player.currentTime = position;
+  }, []);*/
+  const updateSongPosition = useCallback(
+      (position: number) => {
+        // 动作 1：更新 Reducer 状态（供 UI 显示）
+        dispatch({ type: 'UPDATE_SONG_POSITION', data: position });
+        // 动作 2：✅ 关键修正：设置底层播放器的时间
+        // 确保 player 变量指向 AudioPlayer 实例
+        if (player) {
+          // ⚠️ 必须有这一行，才能让歌曲跳转到指定秒数
+          player.currentTime = position;
+        }
+      },
+      [dispatch, player] // 确保依赖项包含 player 实例
+  );
+
   const createQueue = useCallback(
     (
-      newQueue: string[],
+      songIds: string[],
       queueType: QueueTypes,
       isShuffleQueue = store.state.player.isShuffling,
       queueId?: string,
-      startPlaying = false
+      startPlaying = true,
+      initialSongId?: string, // 👈 新增参数
+      initialPosition = 0 // 👈 新增参数，默认值为 0
     ) => {
-      const queue = {
-        currentSongIndex: 0,
-        queue: newQueue,
-        queueId,
-        queueType
-      } as Queue;
+      // 确保这个方法在依赖项中
+      saveCurrentPlaybackProgress();
 
+      let currentSongIndex = 0;
+      let newQueue = [...songIds];
+
+      // 确定续播歌曲在原始队列中的索引 (如果存在)
+      let initialIndex: number | undefined = undefined;
+      if (initialSongId) {
+        const foundIndex = newQueue.indexOf(initialSongId);
+        if (foundIndex !== -1) {
+          initialIndex = foundIndex; // 👈 找到索引 (number)
+        }
+      }
+
+      // 1. 处理随机播放
       if (isShuffleQueue) {
-        const { shuffledQueue, positions } = shuffleQueue(queue.queue);
-        queue.queue = shuffledQueue;
+        // 传递 number 类型的 initialIndex
+        const { shuffledQueue } = shuffleQueueRandomly(
+            newQueue,
+            initialIndex
+        );
+        newQueue = shuffledQueue;
+        currentSongIndex = 0; // 续播歌曲在随机队列中的索引 0
+        // ...
+      } else {
+        // ...
+        // 2. 处理非随机播放
+        if (initialIndex !== undefined) {
+          currentSongIndex = initialIndex; // 使用找到的索引 (number)
+        }
+      }
+      // 3. 更新全局 Queue 状态
+      dispatch({
+        type: 'UPDATE_QUEUE',
+        data: {
+          queue: newQueue,
+          currentSongIndex: currentSongIndex, // 传递 number 类型的索引
+          queueType,
+          queueId // 传递 queueId
+        }
+      });
 
-        if (positions.length > 0) queue.queueBeforeShuffle = positions;
-        queue.currentSongIndex = 0;
-      } else toggleShuffling(false);
-
-      storage.queue.setQueue(queue);
-      if (startPlaying) changeQueueCurrentSongIndex(0);
+      // 4. 启动播放和设置播放位置
+      if (startPlaying && newQueue.length > 0) {
+        playSong(newQueue[currentSongIndex], true);
+        console.log(`[playSong] 进度为: ${initialPosition}`);
+        // 设置播放位置。
+        if (initialPosition > 0) {
+          updateSongPosition(initialPosition);
+        } else {
+          updateSongPosition(0);
+        }
+      }
     },
-    [changeQueueCurrentSongIndex, shuffleQueue, toggleShuffling]
+      // 💥 修正 2：添加所有缺失的依赖项
+      [
+        dispatch,
+        toggleShuffling,
+        shuffleQueueRandomly, // 或您实际使用的 shuffle 函数
+        playSong, // 启动播放
+        updateSongPosition, // 设置播放位置
+      ]
   );
 
   const updateQueueData = useCallback(
@@ -1271,6 +1336,16 @@ export default function App() {
     },
     [playSong, shuffleQueue, toggleShuffling]
   );
+
+  const saveCurrentPlaybackProgress = useCallback(() => {
+    // 获取当前的播放位置
+    const songPosition = player.currentTime;
+    // 派发 Action 来保存当前播放列表的进度
+    dispatch({
+      type: 'SAVE_CURRENT_PLAYBACK_PROGRESS',
+      data: songPosition
+    });
+  }, [dispatch, player]); // 依赖 dispatch 和 player
 
   const updateCurrentSongPlaybackState = useCallback((isPlaying: boolean) => {
     if (isPlaying !== store.state.player.isCurrentSongPlaying)
@@ -1546,10 +1621,6 @@ export default function App() {
       type: 'UPDATE_VOLUME_VALUE',
       data: volume
     });
-  }, []);
-
-  const updateSongPosition = useCallback((position: number) => {
-    if (position >= 0 && position <= player.duration) player.currentTime = position;
   }, []);
 
   const toggleMutedState = useCallback((isMute?: boolean) => {
@@ -1839,6 +1910,8 @@ export default function App() {
       handleSkipBackwardClick,
       handleSkipForwardClick,
       updateSongPosition,
+      // 👈 关键：添加新的实现函数
+      saveCurrentPlaybackProgress,
       updateVolume,
       toggleMutedState,
       toggleRepeat,
@@ -1873,6 +1946,8 @@ export default function App() {
       handleSkipBackwardClick,
       handleSkipForwardClick,
       updateSongPosition,
+      // 👈 关键：添加新的实现函数
+      saveCurrentPlaybackProgress,
       updateVolume,
       toggleMutedState,
       toggleRepeat,

@@ -635,6 +635,13 @@ declare global {
     sortingStates: SortingStates;
     equalizerPreset: Equalizer;
     lyricsEditorSettings: LyricsEditorSettings;
+    playlistPlaybackProgress: Record<
+        string,
+        {
+          songId: string;
+          stoppedPosition: number;
+        }
+    >;
   }
 
   // ? Playlists related types

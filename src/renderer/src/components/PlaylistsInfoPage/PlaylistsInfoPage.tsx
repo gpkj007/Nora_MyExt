@@ -24,6 +24,12 @@ const PlaylistInfoPage = () => {
     store,
     (state) => state.localStorage.sortingStates?.songsPage || 'addedOrder'
   );
+
+  const playlistPlaybackProgress = useStore(
+      store,
+      (state) => state.localStorage.playlistPlaybackProgress
+  );
+
   const preferences = useStore(store, (state) => state.localStorage.preferences);
   const {
     updateQueueData,
@@ -185,15 +191,49 @@ const PlaylistInfoPage = () => {
   );
 
   const playAllSongs = useCallback(
-    () =>
-      createQueue(
+    () =>{
+      /*createQueue(
         playlistSongs.filter((song) => !song.isBlacklisted).map((song) => song.songId),
         'songs',
         false,
         playlistData.playlistId,
         true
       ),
-    [createQueue, playlistData.playlistId, playlistSongs]
+    [createQueue, playlistData.playlistId, playlistSongs]*/
+      // 1. 查找此播放列表的上次播放记录
+      const lastPlayedProgress = playlistPlaybackProgress[playlistData.playlistId];
+      let initialSongId: string | undefined = undefined;
+      let initialPosition: number | undefined = undefined;
+
+      // 检查是否有记录，并且上次播放的歌曲仍在当前列表中
+      if (
+          lastPlayedProgress &&
+          lastPlayedProgress.songId &&
+          playlistSongs.map((song) => song.songId).includes(lastPlayedProgress.songId)
+          // ⚠️ 注意：如果 playlistSongs 已经是 songIds 数组，则不需要 .map((song) => song.songId)
+          // 但如果 playlistSongs 是包含完整歌曲对象的数组，则需要 .map()。
+          // 这里的示例假设 playlistSongs 是完整歌曲对象数组，请根据您的实际类型调整。
+      ) {
+        initialSongId = lastPlayedProgress.songId;
+        initialPosition = lastPlayedProgress.stoppedPosition;
+      }
+
+      return createQueue(
+          playlistSongs.filter((song) => !song.isBlacklisted).map((song) => song.songId),
+          'playlist', // ✅ 关键修正：将 'songs' 改为 'playlist'
+          false,
+          playlistData.playlistId,
+          true,
+          initialSongId, // 续播歌曲 ID
+          initialPosition // 续播播放位置
+      );
+    },
+    [
+      createQueue,
+      playlistData.playlistId,
+      playlistSongs,
+      playlistPlaybackProgress // ✅ 新增依赖项
+    ]
   );
 
   return (

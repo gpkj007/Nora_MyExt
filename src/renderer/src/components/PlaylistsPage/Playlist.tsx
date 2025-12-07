@@ -32,6 +32,10 @@ export const Playlist = (props: PlaylistProp) => {
   const preferences = useStore(store, (state) => state.localStorage.preferences);
   const multipleSelectionsData = useStore(store, (state) => state.multipleSelectionsData);
   const queue = useStore(store, (state) => state.localStorage.queue);
+  const playlistPlaybackProgress = useStore(
+      store,
+      (state) => state.localStorage.playlistPlaybackProgress
+  );
 
   const {
     updateQueueData,
@@ -68,22 +72,42 @@ export const Playlist = (props: PlaylistProp) => {
 
   const playAllSongs = useCallback(
     (isShuffling = false) => {
+      // 1. 查找此播放列表的上次播放记录
+      const lastPlayedProgress = playlistPlaybackProgress[props.playlistId];
+      let initialSongId: string | undefined = undefined;
+      let initialPosition: number | undefined = undefined;
+
+      console.log(`[PLAY_ALL_LOG] 尝试播放列表 ID: ${props.playlistId}`);
+      console.log('[PLAY_ALL_LOG] 存储的上次进度:', lastPlayedProgress);
+      // 检查是否有记录，并且上次播放的歌曲仍在当前列表中
+      if (
+          lastPlayedProgress &&
+          lastPlayedProgress.songId &&
+          props.songs.includes(lastPlayedProgress.songId)
+      ) {
+        initialSongId = lastPlayedProgress.songId;
+        initialPosition = lastPlayedProgress.stoppedPosition;
+      }
+
       window.api.audioLibraryControls
-        .getSongInfo(props.songs, undefined, undefined, undefined, true)
-        .then((songs) => {
-          if (Array.isArray(songs))
-            return createQueue(
-              songs.filter((song) => !song.isBlacklisted).map((song) => song.songId),
-              'playlist',
-              isShuffling,
-              props.playlistId,
-              true
-            );
-          return undefined;
-        })
-        .catch((err) => console.error(err));
+          .getSongInfo(props.songs, undefined, undefined, undefined, true)
+          .then((songs) => {
+            if (Array.isArray(songs))
+              return createQueue(
+                  songs.filter((song) => !song.isBlacklisted).map((song) => song.songId),
+                  'playlist',
+                  isShuffling,
+                  props.playlistId,
+                  true,
+                  // 2. 将续播信息传递给 createQueue
+                  initialSongId, // 👈 上次播放的歌曲 ID
+                  initialPosition // 👈 上次停止的播放位置
+              );
+            return undefined;
+          })
+          .catch((err) => console.error(err));
     },
-    [createQueue, props.playlistId, props.songs]
+    [createQueue, props.playlistId, props.songs,playlistPlaybackProgress]
   );
 
   const playAllSongsForMultipleSelections = useCallback(

@@ -56,7 +56,11 @@ export type AppReducerStateActions =
   | { type: 'TOGGLE_SHUFFLE_STATE'; data?: boolean }
   | { type: 'UPDATE_VOLUME_VALUE'; data: number }
   | { type: 'UPDATE_QUEUE'; data: Queue }
+  | { type: 'UPDATE_PLAYBACK_RATE'; data: number } // 👈 新增此行
+  | { type: 'UPDATE_LOCAL_STORAGE_PREFERENCES'; data: LocalStorage['preferences'] }
   | { type: 'UPDATE_QUEUE_CURRENT_SONG_INDEX'; data: number }
+  | { type: 'UPDATE_PLAYLIST_PROGRESS'; data: { playlistId: string; songId: string; position: number };}
+  | { type: 'SAVE_CURRENT_PLAYBACK_PROGRESS'; data: number }
   | { type: 'TOGGLE_REDUCED_MOTION'; data?: boolean }
   | { type: 'TOGGLE_SONG_INDEXING'; data?: boolean }
   | { type: 'PLAYER_WAITING_STATUS'; data: boolean }
@@ -98,6 +102,75 @@ export const reducer = (state: AppReducer, action: AppReducerStateActions): AppR
           }
         }
       };
+
+    case 'UPDATE_PLAYBACK_RATE': { // 👈 新增处理
+      const playbackRate = action.data ?? state.player.playbackRate;
+      return {
+        ...state,
+        player: {
+          ...state.player,
+          playbackRate // 更新瞬时播放器状态
+        },
+        localStorage: {
+          ...state.localStorage,
+          playback: {
+            ...state.localStorage.playback,
+            playbackRate // 更新持久化存储状态 (用于下次启动)
+          }
+        }
+      };
+    }
+
+    case 'UPDATE_PLAYLIST_PROGRESS': {
+      const { playlistId, songId, position } = action.data;
+
+      return {
+        ...state,
+        localStorage: {
+          ...state.localStorage,
+          playlistPlaybackProgress: {
+            ...state.localStorage.playlistPlaybackProgress,
+            [playlistId]: {
+              songId,
+              stoppedPosition: position
+            }
+          }
+        }
+      };
+    }
+
+    case 'SAVE_CURRENT_PLAYBACK_PROGRESS': {
+      const songPosition = action.data; // 播放器当前的 currentTime
+      const { queueId } = state.localStorage.queue;
+      const currentSongId = state.currentSongData.songId;
+
+      // 仅在当前播放队列是 'playlist' 类型且有 ID 时才保存
+      if (
+          state.localStorage.queue.queueType === 'playlist' &&
+          queueId &&
+          currentSongId
+      ) {
+        // 成功日志（如果在控制台中看到此日志，则保存成功）
+        console.log(`[APP_REDUCER_SUCCESS] 进度已保存。Type: ID: ${queueId}, Song: ${currentSongId}, Pos: ${songPosition}`);
+        return {
+          ...state,
+          localStorage: {
+            ...state.localStorage,
+            playlistPlaybackProgress: {
+              ...state.localStorage.playlistPlaybackProgress,
+              [queueId]: {
+                songId: currentSongId,
+                stoppedPosition: songPosition
+              }
+            }
+          }
+        };
+      }
+      // 失败日志（如果在控制台中看到此日志，则表示条件不满足）
+      console.error(`[APP_REDUCER_SAVE_FAIL] 无法保存。Type: QueueId: ${queueId}, SongId: ${currentSongId}`);
+      return state; // 如果不是播放列表或信息不全，则不作修改
+    }
+
     case 'TOGGLE_SONG_INDEXING':
       return {
         ...state,
@@ -429,6 +502,8 @@ export const LOCAL_STORAGE_DEFAULT_TEMPLATE: LocalStorage = {
     },
     playbackRate: 1.0
   },
+  // 👈 新增：存储每个播放列表的进度
+  playlistPlaybackProgress: {},
   queue: { currentSongIndex: null, queue: [], queueType: 'songs' },
   ignoredSeparateArtists: [],
   ignoredSongsWithFeatArtists: [],

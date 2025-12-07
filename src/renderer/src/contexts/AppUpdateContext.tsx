@@ -35,13 +35,17 @@ export interface AppUpdateContextType {
   toggleMutedState: (isMuted?: boolean) => void;
   updateVolume: (volume: number) => void;
   updateSongPosition: (position: number) => void;
+  // 👈 新增：用于在不依赖 pause 事件时，手动保存当前播放进度
+  saveCurrentPlaybackProgress: () => void;
   updateEqualizerOptions: (options: Equalizer) => void;
   createQueue: (
     songIds: string[],
     queueType: QueueTypes,
     isShuffleQueue?: boolean,
     queueId?: string,
-    startPlaying?: boolean
+    startPlaying?: boolean,
+    initialSongId?: string,
+    initialPosition?: number
   ) => void;
   updateQueueData: (
     currentSongIndex?: number,

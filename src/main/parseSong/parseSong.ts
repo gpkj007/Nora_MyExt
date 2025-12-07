@@ -140,13 +140,13 @@ export const parseSong = async (
       const songId = generateRandomId();
 
       // const start4 = timeEnd(start3, 'Time to generate random id');
-
+      //Buffer.from(metadata.common.picture[0].data)
       // const coverBuffer = await generateCoverBuffer(metadata.common.picture);
 
       const songArtworkPaths = await storeArtworks(
         songId,
         'songs',
-        metadata.common?.picture?.at(0) ? Buffer.from(metadata.common.picture[0].data) : undefined
+        metadata.common?.picture?.at(0) ? undefined : undefined
       );
 
       // const start6 = timeEnd(start4, 'Time to generate store artwork');

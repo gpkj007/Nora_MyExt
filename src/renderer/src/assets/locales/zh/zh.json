@@ -1,0 +1,1119 @@
+{
+  "common": {
+    "song_one": "歌曲",
+    "song_other": "歌曲",
+    "playlist_one": "播放列表",
+    "playlist_other": "播放列表",
+    "artist_one": "艺术家",
+    "artist_other": "艺术家",
+    "album_one": "专辑",
+    "album_other": "专辑",
+    "genre_one": "流派",
+    "genre_other": "流派",
+    "folder_one": "文件夹",
+    "folder_other": "文件夹",
+    "songWithCount_one": "{{count}} 首歌曲",
+    "songWithCount_other": "{{count}} 首歌曲",
+    "playlistWithCount_one": "{{count}} 个播放列表",
+    "playlistWithCount_other": "{{count}} 个播放列表",
+    "artistWithCount_one": "{{count}} 位艺术家",
+    "artistWithCount_other": "{{count}} 位艺术家",
+    "albumWithCount_one": "{{count}} 张专辑",
+    "albumWithCount_other": "{{count}} 张专辑",
+    "genreWithCount_one": "{{count}} 个流派",
+    "genreWithCount_other": "{{count}} 个流派",
+    "folderWithCount_one": "{{count}} 个文件夹",
+    "folderWithCount_other": "{{count}} 个文件夹",
+    "subFolderWithCount_one": "{{count}} 个子文件夹",
+    "subFolderWithCount_other": "{{count}} 个子文件夹",
+
+    "selectionWithCount_one": "已选择 {{count}} 项",
+    "selectionWithCount_other": "已选择 {{count}} 项",
+
+    "shownWithCount": "已显示 {{count}} 项",
+
+    "unknownTitle": "未知标题",
+    "unknownArtist": "未知艺术家",
+    "unknownAlbum": "未知专辑",
+    "unknownGenre": "未知流派",
+    "unknownFolder": "未知文件夹",
+    "unknownLyricsProvider": "未知歌词提供者",
+
+    "songTitle": "歌曲标题",
+    "duration": "时长",
+    "albumArtists": "歌曲专辑艺术家",
+    "albumTrackNo": "专辑曲目编号",
+    "releasedYear": "发行年份",
+    "songAddedOn": "歌曲添加于",
+    "lastModifiedOn": "上次修改于",
+    "sampleRate": "采样率",
+    "bitRate": "比特率",
+    "noOfAudioChannels": "声道数",
+    "channelWithCount_one": "{{count}} 声道 (单声道)",
+    "channelWithCount_other": "{{count}} 声道 (立体声)",
+    "songLocation": "歌曲位置",
+    "lyrics": "歌曲歌词",
+    "syncedLyrics": "同步歌词",
+    "unsyncedLyrics": "非同步歌词",
+
+    "play": "播放",
+    "playNext": "下一首播放",
+    "playNextAll": "全部添加到下一首播放",
+    "shuffleAndPlay": "随机播放",
+    "shuffleAndPlayAll": "随机播放全部",
+    "playAll": "播放全部",
+    "addToQueue": "添加到队列",
+    "removeFromQueue": "从队列中移除",
+    "addSongsToQueue": "添加歌曲到队列",
+    "createAQueue": "创建队列",
+    "info": "信息",
+    "select": "选择",
+    "unselect": "取消选择",
+    "selectAll": "全选",
+    "unselectAll": "取消全选",
+    "showAll": "显示全部",
+    "cancel": "取消",
+    "search": "搜索",
+    "help": "帮助",
+    "copy": "复制",
+
+    "sortBy": "排序方式",
+    "filterBy": "筛选方式",
+    "moreOptions": "更多选项",
+    "title": "标题",
+    "suggestion": "建议",
+    "hideSuggestion": "隐藏建议",
+    "showSuggestion": "显示建议",
+    "and": "和",
+    "ignore": "忽略",
+    "goBack": "返回",
+    "saveArtwork": "保存封面",
+    "readMoreAboutTitle": "阅读更多关于 `{{title}}` 的信息",
+    "doNotShowThisMessageAgain": "不再显示此消息。",
+    "artistConflictResolved": "艺术家冲突已成功解决。",
+    "featArtistSuggestionResolved": "特色艺术家建议已成功解决。",
+    "hasInternet": "您已连接到互联网。",
+    "noInternet": "您未连接到互联网。",
+    "newUpdateAvailable": "有新的应用更新可用。",
+    "checkingForUpdates": "正在检查应用更新...",
+    "updateCheckError": "检查应用更新时发生错误。",
+    "updateCheckErrorNoInternet": "$t(common.updateCheckError) $t(common.noInternet)",
+    "optionDisabled": "此选项已禁用。",
+    "somethingWentWrong": "发生了一些错误。",
+    "details": "详情",
+    "restartApp": "重启应用",
+    "ok": "好的",
+    "loading": "加载中"
+  },
+
+  "titleBar": {
+    "changeTheme": "更改主题",
+    "goBack": "返回 (Alt + 左箭头)",
+    "goHome": "前往主页 (Alt + Home)",
+    "goForward": "前进 (Alt + 右箭头)",
+
+    "minimize": "最小化",
+    "maximize": "最大化",
+    "close": "关闭"
+  },
+
+  "player": {
+    "goToMainPlayer": "前往主播放器 (Ctrl + N)",
+    "openInMiniPlayer": "在迷你播放器中打开 (Ctrl + N)",
+    "openInFullScreen": "全屏打开",
+    "likeDislike": "喜欢/不喜欢 (Ctrl + H)",
+    "likeDislikeDisabled": "无法喜欢/不喜欢歌曲，因为当前播放的歌曲来自未知来源且不支持点赞。",
+    "prevSong": "上一首 (Ctrl + 左箭头)",
+    "playPause": "播放/暂停 (空格)",
+    "nextSong": "下一首 (Ctrl + 右箭头)",
+    "lyrics": "歌词 (Ctrl + L)",
+    "shuffle": "随机播放 (Ctrl + S)",
+    "repeat": "重复 (Ctrl + T)",
+    "muteUnmute": "静音/取消静音 (Ctrl + M)",
+    "currentQueue": "当前队列 (Ctrl + Q)",
+    "adjustPlaybackSpeed": "调整播放速度",
+    "showCurrentQueue": "显示当前队列",
+    "showMiniPlayer": "显示迷你播放器",
+    "otherSettings": "其他设置",
+    "upNext": "即将播放: ",
+    "closeUpNext": "关闭 '即将播放'",
+    "by": "由",
+
+    "errorTitle": "播放器中发生错误。",
+    "errorMessage": "$t(player.errorTitle)<br /> 这可能是尝试播放损坏的歌曲所致。 <details/>",
+    "noErrorMessage": "未生成错误消息"
+  },
+
+  "sortTypes": {
+    "aToZ": "A 到 Z",
+    "zToA": "Z 到 A",
+    "dateAddedAscending": "最早",
+    "dateAddedDescending": "最新",
+    "releasedYearAscending": "发行年份 (升序)",
+    "releasedYearDescending": "发行年份 (降序)",
+    "allTimeMostListened": "收听最多 (所有时间)",
+    "allTimeLeastListened": "收听最少 (所有时间)",
+    "monthlyMostListened": "收听最多 (本月)",
+    "monthlyLeastListened": "收听最少 (本月)",
+    "artistNameAscending": "艺术家名称 (A 到 Z)",
+    "artistNameDescending": "艺术家名称 (Z 到 A)",
+    "albumNameAscending": "专辑名称 (A 到 Z)",
+    "albumNameDescending": "专辑名称 (Z 到 A)",
+    "noOfSongsDescending": "歌曲数量最多",
+    "noOfSongsAscending": "歌曲数量最少",
+    "blacklistedFolders": "黑名单文件夹",
+    "whitelistedFolders": "白名单文件夹",
+    "mostLovedDescending": "最喜爱",
+    "mostLovedAscending": "最不喜爱",
+    "trackNoAscending": "曲目编号 (升序)",
+    "trackNoDescending": "曲目编号 (降序)",
+    "addedOrder": "添加顺序"
+  },
+
+  "filterTypes": {
+    "notSelected": "未选择",
+    "blacklistedSongs": "黑名单歌曲",
+    "whitelistedSongs": "白名单歌曲",
+    "favorites": "收藏夹",
+    "nonFavorites": "非收藏夹"
+  },
+
+  "equalizerPresets": {
+    "custom": "自定义",
+    "flat": "平直",
+    "acoustic": "原声",
+    "bassBooster": "低音增强",
+    "bassReducer": "低音减弱",
+    "classical": "古典",
+    "club": "俱乐部",
+    "dance": "舞曲",
+    "deep": "深沉",
+    "electronic": "电子",
+    "hipHop": "嘻哈",
+    "jazz": "爵士",
+    "latin": "拉丁",
+    "live": "现场",
+    "loudness": "响度",
+    "lounge": "休闲",
+    "metal": "金属",
+    "piano": "钢琴",
+    "pop": "流行",
+    "reggae": "雷鬼",
+    "rnb": "R&B",
+    "rock": "摇滚",
+    "ska": "斯卡",
+    "smallSpeakers": "小型扬声器",
+    "soft": "柔和",
+    "softRock": "柔和摇滚",
+    "spokenWord": "口语",
+    "techno": "高科技舞曲",
+    "trebleBooster": "高音增强",
+    "trebleReducer": "高音减弱",
+    "vocalBooster": "人声增强"
+  },
+
+  "song": {
+    "showInFileExplorer": "在文件资源管理器中显示",
+    "artwork": "歌曲封面",
+    "selectedSongCount": "已选择 {{count}} $t(common.song, {\"count\":{{count}}})",
+    "likeSong": "添加到收藏夹",
+    "unlikeSong": "从收藏夹中移除",
+    "toggleLikeSongs": "从收藏夹中添加/移除歌曲",
+    "addToPlaylists": "添加到播放列表",
+    "goToAlbum": "前往专辑",
+    "editSongTags": "编辑歌曲标签",
+    "reparseSong": "重新解析歌曲",
+    "blacklistSong_one": "加入黑名单",
+    "blacklistSong_other": "加入黑名单",
+    "deblacklist": "从黑名单恢复",
+    "delete": "从系统中删除",
+    "playingNext": "下一首播放",
+    "playingNow": "正在播放",
+    "blacklisted": "已加入黑名单",
+    "likedThisSong": "您喜欢这首歌曲",
+    "dislikedThisSong": "您不喜欢这首歌曲"
+  },
+
+  "artist": {
+    "playAllSongs": "播放所有歌曲",
+    "toggleLikeArtists": "从收藏夹中添加/移除艺术家",
+    "likeArtist": "将艺术家添加到收藏夹",
+    "dislikeArtist": "从收藏夹中移除艺术家",
+    "selectedArtistCount": "已选择 {{count}} $t(common.artist, {\"count\":{{count}}})"
+  },
+
+  "folder": {
+    "toggleBlacklistFolder": "切换文件夹黑名单",
+    "blacklistFolder": "加入黑名单",
+    "selectedFolderCount": "已选择 {{count}} $t(common.folder, {\"count\":{{count}}})",
+    "selectedParentFolderCount_one": "已选择 {{count}} 个父文件夹",
+    "selectedParentFolderCount_other": "已选择 {{count}} 个父文件夹",
+    "directoryCount_one": "{{count}} 个目录",
+    "directoryCount_other": "{{count}} 个目录",
+    "selectedDirectoryCount_one": "已选择 {{count}} 个目录",
+    "selectedDirectoryCount_other": "已选择 {{count}} 个目录"
+  },
+
+  "playlist": {
+    "changeArtwork": "更改封面",
+    "addArtwork": "添加封面",
+    "playlistArtworkUpdateSuccess": "成功更新播放列表封面。",
+    "renamePlaylist": "重命名播放列表",
+    "exportPlaylist": "导出播放列表",
+    "deleteSelectedPlaylists": "删除选定的播放列表",
+    "deletePlaylist_one": "删除播放列表",
+    "deletePlaylist_other": "删除播放列表",
+    "selectedPlaylistCount": "已选择 {{count}} $t(common.playlist, {\"count\":{{count}}})",
+    "empty": "看起来这个播放列表是空的。"
+  },
+
+  "album": {
+    "selectedAlbumCount": "已选择 {{count}} $t(common.album, {\"count\":{{count}}})"
+  },
+
+  "genre": {
+    "selectedGenreCount": "已选择 {{count}} $t(common.genre, {\"count\":{{count}}})"
+  },
+
+  "homePage": {
+    "empty": "这里空空如也..",
+    "emptyDescription": "看起来您还没有将任何音乐文件夹添加到您的媒体库中。",
+    "loading": "请稍候。我们正在为您准备一切...",
+    "listenMoreToShowMetrics": "收听更多歌曲以显示附加指标。",
+
+    "recentlyAddedSongs": "最近添加的歌曲",
+    "recentlyPlayedSongs": "最近播放的歌曲",
+    "recentArtists": "最近的艺术家",
+    "mostLovedSongs": "最喜爱的歌曲",
+    "mostLovedArtists": "最喜爱的艺术家",
+
+    "openSongsWithNewestSortOption": "以“最新”排序选项打开“歌曲”页面。",
+    "openPlaybackHistory": "以“添加顺序”排序选项打开“历史记录”播放列表",
+    "openFavoritesWithAllTimeMostListenedSortOption": "以“收听最多 (所有时间)”排序选项打开“收藏夹”播放列表",
+
+    "noSongsAvailable": "没有可用歌曲",
+    "stayCalm": "保持冷静",
+    "favoritesAndRecaps": "收藏夹和回顾"
+  },
+
+  "searchPage": {
+    "addFolder": "添加文件夹",
+    "enablePredictiveSearch": "启用预测搜索",
+    "disablePredictiveSearch": "禁用预测搜索",
+    "searchForAnything": "搜索任何内容",
+    "searchForAnythingInLibrary": "在您的媒体库中搜索任何内容",
+    "separateKeywords": "搜索时使用 ' ; ' 分隔关键词。",
+    "allFilter": "全部",
+    "mostRelevant": "最相关",
+    "resultCount_one": "{{count}} 个结果",
+    "resultCount_other": "{{count}} 个结果",
+    "resultAndVisibleCount_other": "{{count}} 个结果 ($t(common.shownWithCount, {\"count\":{{noVisible}}}))",
+    "noResults": "没有与您正在查找的内容匹配的结果。",
+    "recentSearchResultTooltipLabel": "搜索 '{{value}}'",
+    "showingResultsFor": "正在显示 <span>'{{query}}'</span> 的结果",
+    "showingResultsForWithFilter": "正在显示 <span>{{filter}}</span> 中 <span>'{{query}}'</span> 的结果",
+
+    "a": "搜索任何内容"
+  },
+
+  "songsPage": {
+    "loading": "请稍候。我们正在为您准备一切...",
+    "empty": "这里空空如也.."
+  },
+
+  "artistsPage": {
+    "empty": "这里空空如也..."
+  },
+
+  "foldersPage": {
+    "addFolder": "添加文件夹",
+    "musicFolders": "音乐文件夹",
+    "empty": "未添加任何文件夹到您的媒体库。"
+  },
+
+  "playlistsPage": {
+    "createNewPlaylist": "创建新播放列表",
+    "importPlaylist": "导入播放列表",
+    "addPlaylist": "添加播放列表",
+    "removeFromThisPlaylist": "从该播放列表中移除",
+    "removeSongFromPlaylistSuccess": "`{{title}}` 已从 '{{playlistName}}' 播放列表中移除",
+    "createdOn": "创建于 {{val, datetime}}",
+    "clearSongHistoryConfirm": "清除歌曲历史记录",
+    "clearSongHistoryConfirmNotice": "您确定要清除您的歌曲历史记录吗？此操作无法撤消。",
+    "clearSongHistorySuccess": "您的歌曲历史记录已成功清除。",
+    "empty": "尚未创建播放列表。",
+
+    "favorites": "收藏夹",
+    "history": "历史记录"
+  },
+
+  "albumsPage": {
+    "empty": "这里空空如也..."
+  },
+
+  "genresPage": {
+    "empty": "这里空空如也..."
+  },
+
+  "settingsPage": {
+    "settings": "设置",
+
+    "appearance": "外观",
+    "changeTheme": "将应用程序主题更改为您的偏好。",
+    "lightTheme": "浅色主题",
+    "darkTheme": "深色主题",
+    "systemTheme": "系统主题",
+
+    "enableImageBasedDynamicThemes": "启用动态主题",
+    "enableImageBasedDynamicThemesDescription": "根据当前播放歌曲封面的主题动态更改应用主题",
+
+    "language": "语言",
+    "languageDescription": "选择您希望 Nora 显示的语言。",
+
+    "audioPlayback": "音频播放",
+    "showRemainingSongDuration": "显示歌曲剩余时长",
+    "showRemainingSongDurationDescription": "显示歌曲的剩余时长而不是默认的歌曲时长。",
+    "playbackRate": "播放速度",
+    "changePlaybackRate": "更改播放器的默认播放速度。",
+    "resetPlaybackRate": "重置为 1x",
+    "seekbarScrollInterval": "更改在音频进度条和音量进度条上滚动时的增量。",
+    "second": "秒",
+    "second_other": "秒",
+
+    "accounts": "账户",
+    "integrateLastFm": "将 Last.fm 与 Nora 集成。",
+    "lastFmLogo": "LastFM 标志",
+    "lastFmConnected": "LastFM 已连接",
+    "lastFmNotConnected": "LastFM 未连接",
+    "loggedInAs": "登录为",
+    "lastFmDescription1": "连接 Last.fm 以启用 Scrobbling。",
+    "lastFmDescription2": "Scrobbling 是一种发送用户正在收听的音乐信息的方式。",
+    "lastFmDescription3": "每当您收听一首歌曲时，Last.fm 就会“Scrobble”该歌曲并将其添加到您的账户中。",
+    "lastFmDescription4": "此功能需要互联网连接。",
+    "authenticateAgain": "重新验证",
+    "loginInBrowser": "通过浏览器登录",
+    "scrobblingDescription": "启用 Last.fm Scrobbling 以发送与您收听歌曲方式相关的数据。",
+    "enableScrobbling": "启用 Last.fm Scrobbling",
+    "sendFavoritesToLastFmDescription": "在您喜欢/不喜欢歌曲时将收藏夹数据发送到 Last.fm。",
+    "sendFavoritesToLastFm": "发送收藏夹数据",
+    "sendNowPlayingToLastFmDescription": "当您开始播放歌曲时，自动将当前正在播放的歌曲数据发送到 Last.fm。",
+    "sendNowPlayingToLastFm": "发送当前正在播放的歌曲数据",
+    "enableDiscordRpcDescription": "将 Discord Rich Presence 与 Nora 集成",
+    "enableDiscordRpc": "启用 Discord Rich Presence",
+
+    "doNotSaveLyricsAutomatically": "不自动保存歌词",
+    "syncedLyricsOnly": "仅同步歌词",
+    "saveEitherLyrics": "同步或非同步歌词",
+    "lyrics": "歌词",
+    "enableMusixmatchLyricsDescription": "启用 Musixmatch 歌词，该功能可按需为您的歌曲提供同步和非同步歌词。",
+    "musixmatchDisclaimerNotice": "启用和使用此功能意味着您同意并接受 <Button>Musixmatch 歌词免责声明</Button>。",
+    "editMusixmatchSettings": "编辑 Musixmatch 设置",
+    "enableMusixmatch": "启用 Musixmatch 歌词",
+    "musixmatchEnabled": "Musixmatch 歌词已启用",
+    "saveLyricsAutomaticallyDescription": "选择一个选项，以便在歌词页面获取歌词时自动保存歌曲歌词。",
+    "saveLyricsAutomaticallyInfo": "自动下载的歌词将在当前歌曲播放结束后保存，以防止发生任何损坏。",
+    "saveLyricsInLrcFilesDescription": "为支持元数据编辑的歌曲启用在 LRC 文件中保存歌词。如果歌曲文件不支持元数据编辑，Nora 将在 LRC 文件中保存歌词。",
+    "saveLyricsInLrcFiles": "同时为支持的歌曲在 LRC 文件中保存歌词",
+    "autoTranslateLyricsDescription": "启用歌词自动翻译成您选择的语言。即使歌词与您选择的语言相同，歌词也会自动翻译。",
+    "autoTranslateLyrics": "自动翻译歌词",
+    "autoConvertLyricsDescription": "启用自动将支持的歌词转换为拉丁字符。目前，Nora 支持将日文、中文和韩文歌词转换为其各自的罗马化系统。",
+    "autoConvertLyrics": "自动转换歌词",
+    "lrcFileCustomSaveLocationDescription": "如果您不想将 LRC 文件保存在与相关歌曲相同的文件夹中，请选择一个自定义位置来保存歌曲的 LRC 文件。",
+    "selectedCustomLocation": "已选自定义位置",
+    "setCustomLocation": "设置自定义位置",
+
+    "equalizer": "均衡器",
+    "reset": "重置",
+
+    "defaultPage": "默认页面",
+    "changeDefaultPageDescription": "更改您打开应用时希望看到的默认页面。",
+
+    "preferences": "偏好设置",
+    "songIndexingDescription": "启用页面中的歌曲索引，在“歌曲”选项卡中的每首歌曲前添加一个数字。",
+    "enableSongIndexing": "启用歌曲索引",
+    "showTrackNumberAsSongIndexDescription": "在专辑页面中，在歌曲前显示曲目编号。",
+    "showTrackNumberAsSongIndex": "显示曲目编号作为歌曲索引",
+    "showArtistArtworkNearSongControlsDescription": "在歌曲控制面板上，在歌曲标题附近的艺术家名称旁边显示艺术家封面。",
+    "showArtistArtworkNearSongControls": "在艺术家姓名旁边显示可用的艺术家封面 (左下角)。",
+    "disableBackgroundArtworksDescription": "禁用在某些页面背景上显示的较大封面。",
+    "disableBackgroundArtworks": "禁用背景封面",
+    "playlistArtworksDescription": "更改由歌曲封面制作的封面的行为。",
+    "enablePlaylistArtworks": "启用由歌曲封面制作的播放列表封面",
+    "shuffleArtworkFromSongCovers": "启用随机播放由歌曲封面制作的封面。（每次页面刷新时封面都会随机切换。）",
+
+    "accessibility": "辅助功能",
+    "reducedMotionDescription": "移除应用中出现的动画。这也将降低应用的流畅性。",
+    "enableReducedMotion": "启用减少动态效果",
+
+    "performance": "性能",
+    "removeAnimationOnBatteryDescription": "当您的系统使用电池供电时，移除应用中的动画。",
+    "removeAnimationOnBattery": "在电池供电时移除动画。",
+    "allowToPreventScreenSleepingDescription": "允许 Nora 在没有用户活动的情况下（例如显示歌词时）防止显示器进入休眠状态。",
+    "allowToPreventScreenSleeping": "允许防止显示器进入休眠状态。",
+
+    "startupAndWindowCustomization": "启动和窗口设置",
+    "autoLaunchAtStartDescription": "启用此设置将在您登录计算机时自动启动 Nora。",
+    "autoLaunchAtStart": "启动时自动运行",
+    "hideWindowAtStartDescription": "配置 Nora 启动时是否应可见。",
+    "hideWindowAtStart": "启动时将 Nora 启动到系统托盘",
+    "hideWindowOnCloseDescription": "配置当您单击关闭按钮时 Nora 的行为。",
+    "hideWindowOnClose": "单击关闭按钮时将 Nora 隐藏到系统托盘。",
+
+    "storage": "存储",
+    "storageDescription": "查看 Nora 如何管理您的媒体库和利用您的存储空间。",
+
+    "fullStorageSpace": "总存储空间使用量",
+    "fullStorageOutOfUsage": "{{value}} / {{total}}",
+    "freeSpace": "可用空间",
+    "otherApplications": "其他应用程序",
+    "artworkCache": "封面缓存",
+    "tempArtworkCache": "临时封面缓存",
+    "databaseData": "数据库",
+    "songsData": "歌曲数据",
+    "artistsData": "艺术家数据",
+    "albumsData": "专辑数据",
+    "playlistsData": "播放列表数据",
+    "palettesData": "调色板数据",
+    "genresData": "流派数据",
+    "appLogs": "应用程序日志",
+    "userData": "用户数据",
+    "internalAppFiles": "内部应用程序文件",
+    "storageUseForLibraryData": "媒体库数据存储使用情况",
+    "otherAppFiles": "其他应用程序文件",
+    "generated": "已生成",
+    "generateStorageMetrics": "生成存储指标",
+    "generateStorageMetricsAgain": "重新生成存储指标",
+    "noStorageMetrics": "看起来您尚未生成存储指标。",
+    "storageMetricsGenerationDisclaimer": "生成存储指标是一个相对占用计算资源的任务，这意味着 Nora 可能会暂时无响应。请耐心等待...",
+    "storageMetricsGenerationError": "看起来我们这边出了一些问题。请向开发者报告此问题。",
+
+    "advanced": "高级",
+    "saveVerboseLogsDescription": "保存详细日志用于调试目的。这将增加日志的大小。",
+    "saveVerboseLogs": "保存详细日志",
+
+    "about": "关于",
+    "releasedOn": "发布于 {{val, datetime}}",
+    "noraWebsite": "Nora 官方网站",
+    "noraDiscordServer": "Nora 官方 Discord 服务器",
+    "noraGithubRepo": "Nora 的 Github 仓库",
+    "noraGithubIssues": "Nora 的 Github 问题",
+    "noraLocalizationStatus": "Nora 本地化状态",
+    "noraDescription": "Nora 是一款使用 Electron 和 React 构建的优雅音乐播放器。",
+    "noraInspiration": "灵感来自于 Piyush Mamidwar 的 <Hyperlink>适用于 Android 的 Oto Music</Hyperlink>。",
+    "otoMusicOnPlayStore": "Play Store 上的适用于 Android 的 Oto Music",
+    "noraLicenseNotice": "本产品根据 <Button>MIT 许可证</Button> 获得许可。",
+    "appLicense": "应用许可证",
+    "releaseNotes": "发行说明",
+    "openSourceLicenses": "开源许可证",
+    "openLogFile": "打开日志文件",
+    "openDevtools": "打开开发工具",
+    "resyncLibrary": "重新同步媒体库",
+    "generatePalettes": "生成调色板",
+    "appShortcuts": "应用快捷键",
+
+    "resetApp": "重置应用",
+    "clearOptionalData": "清除可选数据",
+    "clearHistory": "清除历史记录",
+    "confirmSongHistoryDeletion": "清除歌曲历史记录",
+    "songHistoryDeletionDisclaimer": "您确定要清除您的歌曲历史记录吗？此操作无法撤消。",
+    "songHistoryDeletionSuccess": "您的歌曲历史记录已成功清除。",
+    "exportAppData": "导出应用数据",
+    "importAppData": "导入应用数据",
+    "createIssueOnNoraGithubRepo": "在 $t(settingsPage.noraGithubRepo) 上创建问题",
+    "contact": "如果您对应用程序有任何反馈，例如错误、功能请求等，请 <Hyperlink>$t(settingsPage.createIssueOnNoraGithubRepo)</Hyperlink>",
+    "emailContact": "或通过我的电子邮件联系我。",
+    "loveNora": "由 <Hyperlink>Sandakan Nipunajith</Hyperlink> 用 <span>❤</span> 制作。",
+    "sandakanGithubProfile": "Sandakan 的 Github 个人资料",
+    "beautifulSriLanka": "美丽的斯里兰卡"
+  },
+
+  "artistInfoPage": {
+    "likeArtist": "喜欢 {{name}}",
+    "dislikeArtist": "不喜欢 {{name}}",
+    "appearsInAlbums": "出现在专辑中",
+    "appearsInSongs": "出现在歌曲中",
+    "similarArtistsInLibrary": "媒体库中相似的艺术家",
+    "otherSimilarArtists": "其他相似的艺术家",
+    "viewInLastFm": "在 Last.fm 中查看 `{{name}}`"
+  },
+
+  "albumInfoPage": {
+    "unavailableTracks": "此专辑中不可用的曲目"
+  },
+
+  "currentQueuePage": {
+    "queue": "当前播放队列",
+    "folderWithName": "{{name}} 文件夹",
+    "enableAutoScrolling": "启用自动滚动",
+    "disableAutoScrolling": "禁用自动滚动",
+    "scrollToCurrentPlayingSong": "滚动到当前播放歌曲",
+    "shuffleQueue": "随机播放队列",
+    "queueShuffleSuccess": "队列已成功随机播放。",
+    "clearQueue": "清除队列",
+    "queueCleared": "队列已清除。",
+    "durationRemaining": "剩余 {{duration}}",
+    "empty": "队列为空。"
+  },
+
+  "lyricsEditingPage": {
+    "lyricsText": "歌词文本",
+    "startInSeconds": "开始时间 (秒)",
+    "endInSeconds": "结束时间 (秒)",
+    "fromTo": "从 {{start}} 到 {{end}}",
+    "deleteLine": "删除行",
+    "addLineAbove": "在上方添加行",
+    "addLineBelow": "在下方添加行",
+    "addInstrumentalLineBelow": "在下方添加纯音乐行",
+    "editLine": "编辑行",
+    "finishEditing": "完成编辑",
+    "resetLyrics": "重置歌词",
+    "resetLyricsConfirm": "您确定要重置歌词吗？",
+    "resetLyricsConfirmMessage": "<p>如果您继续此操作，您将丢失 <span>最近的歌词行修改</span> 和 <span>开始/结束同步数据</span>。</p> <br/> <p>此操作不可逆。</p>",
+    "incorrectSongTitle": "歌曲不正确",
+    "incorrectSongMessage": "要开始编辑，请播放歌曲 `{{title}}`。",
+    "lyricsEditor": "歌词编辑器",
+    "playbackSpeed": "速度",
+    "playbackTime": "时间",
+    "offsetWithCount": "{{count}} 偏移",
+    "saveLyrics": "保存歌词",
+    "stopAndEditLyrics": "停止并编辑歌词",
+    "playLyrics": "播放歌词",
+    "configure": "配置"
+  },
+
+  "lyricsPage": {
+    "noLyrics": "未找到歌词。",
+    "noLyricsDescription": "我们找不到这首歌的任何歌词。您可以在标签编辑器中添加您自己的歌词。",
+    "noSyncedLyrics": "未找到同步歌词。",
+    "noSyncedLyricsDescription": "我们找不到这首歌的任何同步歌词。",
+    "noOnlineLyrics": "未找到在线歌词。",
+    "noOfflineLyrics": "未找到离线歌词。",
+    "noSavedLyrics": "未找到已保存的歌词。",
+    "onlineLyricsRefreshFailed": "刷新在线歌词失败。",
+    "offlineLyricsForSong": "`{{title}}` 的离线歌词",
+    "onlineLyricsForSong": "`{{title}}` 的在线歌词",
+    "editLyrics": "在编辑器中编辑歌词",
+    "translateLyrics": "翻译歌词",
+    "romanizeLyrics": "将日文歌词罗马化",
+    "convertLyricsToPinyin": "将中文歌词转换为拼音",
+    "convertLyricsToRomaja": "将韩文歌词转换为罗马字",
+    "resetLyrics": "重置歌词",
+    "showOnlineLyrics": "显示在线歌词",
+    "refreshOnlineLyrics": "刷新在线歌词",
+    "showSavedLyrics": "显示已保存的歌词",
+
+    "lyricsLoading": "正在查找歌词",
+    "lyricsLoadingDescription": "请稍候...我们正在到处寻找...",
+    "noInternet": "没有互联网连接",
+    "noInternetDescription": "这首歌没有离线歌词。您需要互联网连接才能检查在线歌词。",
+    "lyricsProvidedBy": "歌词由 <Hyperlink/> 提供",
+    "lyricsTranslatedBy": "歌词使用 Google 翻译"
+  },
+
+  "songInfoPage": {
+    "listensCount": "{{count}} 次收听",
+    "listeningActivityInLastMonths": "过去 {{count}} 个月的收听活动",
+    "similarTracksInLibrary": "媒体库中相似的曲目",
+    "otherSimilarTracks": "其他相似的曲目",
+    "additionalSongInfo": "附加歌曲信息",
+    "allTimeListens": "所有时间收听次数",
+    "listensThisMonth": "本月收听次数",
+    "listensThisYear": "今年收听次数",
+    "totalSongSkips": "总跳过歌曲次数",
+    "fullSongListens": "完整收听歌曲次数",
+    "mostSoughtPosition": "最常寻位置",
+    "mostSoughtFrequency": "最常寻频率",
+    "lovedSong": "您喜欢这首歌曲",
+    "unlovedSong": "您不喜欢这首歌曲",
+    "byArtists": " <By>由</By> <span>{{val, list}}</span>"
+  },
+
+  "songTagsEditingPage": {
+    "editArtwork": "编辑封面",
+    "removeArtwork": "移除封面",
+    "lyricsIncluded": "包含歌词",
+    "addToMetadata": "添加到元数据",
+    "customizeMetadata": "自定义元数据",
+    "songMetadataEditor": "歌曲元数据编辑器",
+    "searchMetadataOnInternet": "在互联网上搜索元数据",
+    "saveTags": "保存元数据标签",
+    "updateAddedToBeSavedLater": "当前正在播放歌曲的元数据更新将在歌曲播放结束后保存。",
+    "pendingUpdateAvailable": "此歌曲有一个待保存的元数据更新。",
+    "saveTagsNotSupportedTitle": "不支持",
+    "saveTagsNotSupportedDescription": "<P1>Nora 当前不支持编辑 <Format/> 格式的歌曲元数据。</P1><P2>目前仅支持 <SupportedFormat/> 格式。",
+    "albumArtistNotMentioned": "歌曲已经是名为 `{{title}}` 的专辑的一部分，但其艺术家 '{{artists}}' 未被指定为此歌曲的专辑艺术家。",
+    "songAlbumArtistMismatch": "选择的专辑艺术家 '{{albumArtists}}' 与选择的专辑 '{{albumTitle}}' 的艺术家 '{{songAlbumArtists}}' 不匹配。",
+    "searchForArtists": "在此搜索艺术家",
+    "searchForAlbums": "在此搜索专辑",
+    "searchForGenres": "在此搜索流派",
+    "addNewArtist": "添加新艺术家 `{{name}}`",
+    "addNewAlbum": "添加新专辑 `{{name}}`",
+    "addNewGenre": "添加新流派 `{{name}}`",
+    "albumName": "专辑名称",
+    "songArtists": "歌曲艺术家",
+    "songName": "歌曲名称",
+    "composer": "作曲家",
+    "syncedLyricsFetchFailed": "获取同步歌词失败。",
+    "lyricsEnhancedSynced": "歌词已增强同步。",
+    "lyricsNotEnhancedSynced": "歌词未增强同步。",
+    "enhancedLyricsSupported": "支持增强同步歌词。",
+    "readMoreAboutLrc": "$t(common.readMoreAboutTitle, {\"title\": \"LRC 格式\"})",
+    "avoidUnsyncedOnSyncedLyricsTab": "避免在同步歌词标签页中输入非同步歌词。",
+    "avoidSyncedOnUnsyncedLyricsTab": "避免在非同步歌词标签页中输入同步歌词。",
+    "pendingLyricsSavesAvailable": "有待保存到此歌曲的歌词。它们将在当前歌曲播放结束后保存并在此处可见。",
+    "downloadLyrics": "下载歌词",
+    "downloadSyncedLyrics": "下载同步歌词",
+    "musixmatchNotEnabled": "您必须从设置中启用 Musixmatch 歌词才能使用此功能。"
+  },
+
+  "miniPlayer": {
+    "alwaysOnTopEnabled": "始终置顶: 开",
+    "alwaysOnTopDisabled": "始终置顶: 关"
+  },
+
+  "time": {
+    "second_one": "秒",
+    "second_other": "秒",
+    "minute_one": "分钟",
+    "minute_other": "分钟",
+    "hour_one": "小时",
+    "hour_other": "小时",
+    "day_one": "天",
+    "day_other": "天",
+    "month_one": "月",
+    "month_other": "月",
+    "year_one": "年",
+    "year_other": "年",
+    "secondWithCount": "{{count}} $t(time.second, {\"count\":{{count}}})",
+    "minuteWithCount": "{{count}} $t(time.minute, {\"count\":{{count}}})",
+    "hourWithCount": "{{count}} $t(time.hour, {\"count\":{{count}}})",
+    "dayWithCount": "{{count}} $t(time.day, {\"count\":{{count}}})",
+    "monthWithCount": "{{count}} $t(time.month, {\"count\":{{count}}})",
+    "yearWithCount": "{{count}} $t(time.year, {\"count\":{{count}}})"
+  },
+
+  "elapsedTime": {
+    "second_one": "{{count}} 秒前",
+    "second_other": "{{count}} 秒前",
+    "minute_one": "{{count}} 分钟前",
+    "minute_other": "{{count}} 分钟前",
+    "hour_one": "{{count}} 小时前",
+    "hour_other": "{{count}} 小时前",
+    "day_one": "{{count}} 天前",
+    "day_other": "{{count}} 天前",
+    "month_one": "{{count}} 个月前",
+    "month_other": "{{count}} 个月前",
+    "year_one": "{{count}} 年前",
+    "year_other": "{{count}} 年前"
+  },
+
+  "month": {
+    "january": "一月",
+    "february": "二月",
+    "march": "三月",
+    "april": "四月",
+    "may": "五月",
+    "june": "六月",
+    "july": "七月",
+    "august": "八月",
+    "september": "九月",
+    "october": "十月",
+    "november": "十一月",
+    "december": "十二月"
+  },
+
+  "data": {
+    "byteWithCount_one": "{{count}} 字节",
+    "byteWithCount_other": "{{count}} 字节"
+  },
+
+  "sideBar": {
+    "home": "主页",
+    "search": "搜索"
+  },
+
+  "renamePlaylistPrompt": {
+    "renamePlaylistWithName": "重命名 `{{name}}` 播放列表",
+    "playlistName": "播放列表名称"
+  },
+
+  "newPlaylistPrompt": {
+    "addPlaylistSuccess": "播放列表添加成功。",
+    "playlistNameEmpty": "播放列表名称是必填项",
+    "addNewPlaylist": "添加新播放列表"
+  },
+
+  "confirmDeletePlaylistsPrompt": {
+    "playlistsDeletedWithCount": "$t(common.playlistWithCount, {\"count\":{{count}}}) 已删除。",
+    "confirmPlaylistDeleteWithCount": "确认删除 $t(common.playlistWithCount, {\"count\":{{count}}})",
+    "message_one": "移除此播放列表将移除您整理到此播放列表中的歌曲之间的连接。如果您决定删除它，您将无法再次访问此播放列表。",
+    "message_other": "移除这些播放列表将移除您整理到这些播放列表中的歌曲之间的连接。如果您决定删除它们，您将无法再次访问这些播放列表。",
+    "modificationNotice": "执行此操作将影响以下文件: "
+  },
+
+  "resetAppConfirmationPrompt": {
+    "confirmAppReset": "确认重置应用",
+    "message": "重置应用会移除所有用户数据，包括与歌曲、收藏夹、偏好设置、已应用设置等相关的数据，但 **不会** 移除歌曲本身。请注意，此操作是 <span>不可逆的</span>。",
+    "restartAfterReset": "重置后 Nora 将重启。",
+    "systemPlaylistsRemovalProhibited": "您不能移除历史记录或收藏夹等系统播放列表。"
+  },
+
+  "addSongsToPlaylistsPrompt": {
+    "songsAddedToPlaylists": "已将 $t(common.songWithCount, {\"count\":{{count}}}) 添加到 $t(common.playlistWithCount, {\"count\":{{playlistCount}}})",
+    "selectPlaylistsToAdd": "选择要添加 $t(common.songWithCount, {\"count\":{{count}}}) 的播放列表",
+    "duplicationNotice": "将多首歌曲添加到播放列表时，已在所选播放列表中的歌曲将被忽略。"
+  },
+
+  "blacklistSongConfirmPrompt": {
+    "title": "确认将 $t(common.songWithCount, {\"count\":{{count}}}) 从媒体库中加入黑名单",
+    "message_one": "您即将将这首歌曲从媒体库中加入黑名单。您可以通过右键单击它并单击 '$t(song.deblacklist)' 来再次恢复它。与此歌曲相关的数据不会受到此操作的影响。",
+    "message_other": "您即将将这些歌曲从媒体库中加入黑名单。您可以通过右键单击它们并单击 '$t(song.deblacklist)' 来再次恢复它们。与这些歌曲相关的数据不会受到此操作的影响。",
+    "effectTitle": "将歌曲加入黑名单的作用",
+    "effect1": "将在媒体库中显示为灰色，带有 '<span/>' 符号。",
+    "effect2": "除非您明确添加它们，否则不会自动添加到队列中，甚至不会通过 <span>'$t(common.shuffleAndPlay)'</span> 或<span>'$t(common.playAll)'</span>。",
+    "effect3": "仍然可以通过双击或使用 <span>'$t(common.play)'</span> 或 <span>'$t(common.playNext)'</span> 播放。",
+    "songsBlacklisted": "$t(common.songWithCount, {\"count\":{{count}}}) 已加入黑名单并从媒体库中移除"
+  },
+
+  "blacklistFolderConfirmPrompt": {
+    "title": "确认将 $t(common.folderWithCount, {\"count\":{{count}}}) 从媒体库中加入黑名单",
+    "message_one": "您即将将此文件夹加入黑名单。您可以从“文件夹”页面通过右键单击并选择 '$t(song.deblacklist)' 来再次恢复它。与此文件夹相关的数据不会受到此操作的影响。",
+    "message_other": "您即将将这些文件夹加入黑名单。您可以从“文件夹”页面通过右键单击并选择 '$t(song.deblacklist)' 来再次恢复它们。与这些文件夹相关的数据不会受到此操作的影响。",
+    "effectTitle": "将文件夹加入黑名单的作用",
+    "effect1": "将在媒体库中显示为灰色，带有 '<span/>' 符号。",
+    "effect2": "链接到此文件夹的歌曲也将被加入黑名单。",
+    "effectTitle2": "链接到黑名单文件夹的歌曲会发生什么",
+    "folderBlacklisted": "$t(common.folderWithCount, {\"count\":{{count}}}) 已加入黑名单。"
+  },
+
+  "deleteSongFromSystemConfirmPrompt": {
+    "title_one": "从系统中删除 `{{title}}`",
+
+    "title_other": "从系统中删除 $t(common.songWithCount, {\"count\":{{count}}})",
+    "permanentlyDeleteFromSystem": "从系统中永久删除",
+    "message_one": "如果您选择“$t(deleteSongFromSystemConfirmPrompt.permanentlyDeleteFromSystem)”选项，您将从系统中丢失此歌曲，并且可能无法再次恢复。",
+    "message_other": "如果您选择“$t(deleteSongFromSystemConfirmPrompt.permanentlyDeleteFromSystem)”选项，您将从系统中丢失这些歌曲，并且可能无法再次恢复。",
+    "modificationNotice": "执行此操作会影响以下文件：",
+    "deleteSong": "删除歌曲",
+    "songPermanentlyDeleted": "$t(common.songWithCount, {\"count\":{{count}}}) 已从系统中移除。",
+    "songMovedToBin": "$t(common.songWithCount, {\"count\":{{count}}}) 已移动到回收站。"
+  },
+
+  "addMusicFoldersPrompt": {
+    "title": "选择要添加的文件夹",
+    "emptyMessage1": "看起来您没有选择任何文件夹。",
+    "emptyMessage2": "从您的系统中选择一些文件夹，它们将出现在此处供您进一步自定义。",
+    "chooseFolders": "选择文件夹",
+    "addSelectedFolders": "添加选定的文件夹",
+    "noFoldersSelected": "未选择任何文件夹。（必须有一个父文件夹）"
+  },
+
+  "removeFolderConfirmationPrompt": {
+    "title": "确认移除 `{{folderName}}` 文件夹",
+    "message": "您确定要从音乐媒体库中移除此文件夹吗？这将移除与此文件夹相关的所有数据，包括音乐媒体库中的歌曲数据。您系统上的文件将保持不变。",
+    "removeFolder": "移除文件夹"
+  },
+
+  "lyricsEditorHelpPrompt": {
+    "title": "如何使用 Nora 的歌词编辑器",
+    "subTitle1": "如何开始使用编辑器？",
+    "subTitle1Message": " <ol><li>播放您正在尝试编辑歌词的歌曲。（如果您不在正确的歌曲中，应用将阻止向歌词行添加不正确的元数据。）</li><li>单击页面区域以使页面获得焦点。（页面焦点是使页面特定键盘快捷键工作所必需的。）</li><li>从头开始播放歌曲。如果您想对播放进行更多控制，请设置为重复当前歌曲。</li><li>当歌曲的人声唱出歌词行时，按下 <ShortcutButton>$t(appShortcutsPrompt.enterKey)</ShortcutButton> 以突出显示下一歌词行并添加当前时间到开始标签。</li><li>继续直到最后一行歌词。</li></ol>",
+    "subTitle2": "在歌词编辑器中可以使用哪些键盘快捷键？",
+    "subTitle2Message": "转到 <Button>快捷键提示</Button> 以查看可以在歌词编辑器中使用的相关快捷键。",
+    "subTitle3": "我错过了一行歌词？",
+    "subTitle3Message": "<ol><li>暂停歌曲。</li><li>找到相关的歌词行。</li><li>单击该行下方的 <ShortcutButton>编辑</ShortcutButton> 按钮并进行必要的修改。</li><li>修改后，单击 <ShortcutButton>$t(lyricsEditingPage.finishEditing)</ShortcutButton> 以完成修改。</li></ol>",
+    "subTitle4": "我向错误的行添加了错误的数据？"
+  },
+
+  "lyricsEditorSavePrompt": {
+    "lyricsUpdateSuccess": "歌词成功更新。",
+    "saveEditedLyrics": "保存已编辑的歌词",
+    "copyLyrics": "复制歌词",
+    "saveLyricsToSong": "保存歌词到歌曲",
+    "saveLyricsNotSupported": "Nora 当前不支持将歌词保存到 '{{format}}' 音频格式的歌曲。",
+    "saveLyricsFormatInfo": "* 歌词以 <Hyperlink>LRC 格式</Hyperlink> 保存。",
+    "readAboutLrcFormat": "阅读更多关于 LRC 格式的信息"
+  },
+
+  "lyricsEditorSettingsPrompt": {
+    "lyricsEditorSettings": "歌词编辑器设置",
+    "editNextAndCurrentStartAndEndTagsAutomaticallyDescription": "当您编辑当前歌词行的结束时间标签时，自动更改下一歌词行的开始时间标签，反之亦然。",
+    "editNextAndCurrentStartAndEndTagsAutomatically": "自动编辑下一行的开始标签与当前行的结束标签，反之亦然。",
+    "lyricOffsetInputDescription": "选择一个负或正偏移量以在自动编辑歌词行时添加。",
+    "lyricOffsetInput": "偏移量（+ 或 -）"
+  },
+
+  "pageFocusPrompt": { "pageNotFocused": "页面未聚焦。" },
+
+  "releaseNotesPrompt": {
+    "latestVersion": "您使用的是最新版本。",
+    "oldVersion": "<br/><span>您使用的不是最新版本。</span> <Hyperlink>立即更新</Hyperlink>",
+    "outdatedChangelogNotice": "您可能正在查看过时的变更日志。",
+    "versionCheckError": "<br/><span>检查新更新失败。我们这边出了点问题。<div>$t(releaseNotesPrompt.outdatedChangelogNotice)</div></span>",
+    "versionCheckNetworkError": "<br/><span>我们无法检查新更新。请检查您的网络连接并重试。<div>$t(releaseNotesPrompt.outdatedChangelogNotice)</div></span>",
+    "noraReleases": "Nora 发行版",
+    "changelog": "变更日志",
+    "doNotRemindThisVersionUpdate": "不再提醒我此版本的应用更新。",
+    "current": "当前",
+    "latest": "最新",
+    "newFeaturesAndUpdates": "新功能和更新",
+    "fixesAndImprovements": "修复和改进",
+    "issuesAndBugs": "已知问题和错误",
+    "developerUpdates": "开发者更新"
+  },
+
+  "appShortcutsPrompt": {
+    "inAppShortcuts": "应用内快捷键",
+
+    "mediaPlayback": "媒体播放",
+    "playPause": "播放 / 暂停",
+    "toggleMute": "切换静音",
+    "nextSong": "下一首歌曲",
+    "prevSong": "上一首歌曲",
+    "tenSecondsForward": "快进 10 秒",
+    "tenSecondsBackward": "快退 10 秒",
+    "upVolume": "增大音量",
+    "downVolume": "减小音量",
+    "toggleShuffle": "切换队列随机播放",
+    "toggleRepeat": "切换队列重复",
+    "toggleFavorite": "切换收藏",
+    "upPlaybackRate": "增加播放速度 0.05x",
+    "downPlaybackRate": "减少播放速度 0.05x",
+    "resetPlaybackRate": "重置播放速度为 1x",
+
+    "navigation": "导航",
+    "goHome": "前往主页",
+    "goBack": "返回",
+    "goForward": "前进",
+    "openMiniPlayer": "打开迷你播放器",
+    "goToLyrics": "前往歌词",
+    "goToQueue": "前往当前队列",
+    "goToSearch": "前往搜索",
+
+    "selections": "选择",
+    "selectMultipleItems": "选择多个项目",
+
+    "lyrics": "歌词",
+    "playNextLyricsLine": "播放下一行歌词",
+    "playPrevLyricsLine": "播放上一行歌词",
+
+    "lyricsEditor": "歌词编辑器",
+    "selectNextLyricsLine": "选择下一行歌词",
+    "selectPrevLyricsLine": "选择上一行歌词",
+    "selectCustomLyricsLine": "选择自定义歌词行",
+
+    "otherShortcuts": "其他快捷键",
+    "toggleTheme": "切换应用主题",
+    "toggleMiniPlayerAlwaysOnTop": "切换迷你播放器始终置顶",
+    "reload": "重新加载",
+    "openDevtools": "打开开发工具",
+    "openAppShortcutsPrompt": "打开应用快捷键提示",
+
+    "enterKey": "回车",
+    "spaceKey": "空格",
+    "ctrlKey": "Ctrl",
+    "shiftKey": "Shift",
+    "altKey": "Alt",
+    "homeKey": "Home",
+    "rightArrowKey": "右箭头",
+    "leftArrowKey": "左箭头",
+    "upArrowKey": "上箭头",
+    "downArrowKey": "下箭头",
+
+    "mouseClick": "鼠标点击",
+    "doubleClick": "双击"
+  },
+
+  "clearLocalStoragePrompt": {
+    "title": "确认清除本地存储数据",
+    "description": "此过程将清除 Nora 中任何损坏的本地存储数据，并将其恢复为默认设置。",
+    "effect": "<p>执行此操作将影响以下数据：</p><ul><li>Nora 中的大部分偏好设置</li><li>播放设置，例如当前播放歌曲、音量等。</li><li>当前队列数据</li><li>被忽略的建议数据，例如特色艺术家、独立艺术家和重复项</li><li>页面排序数据</li><li>均衡器数据</li><li>歌词编辑器设置</li></ul>",
+    "restartNotice": "Nora 将在操作后重启。"
+  },
+
+  "musixmatchDisclaimerPrompt": {
+    "title": "免责声明 - Musixmatch 歌词",
+    "message": "<li> Musixmatch 歌词作为此软件的评估功能添加，并可能随时移除。</li><li>Nora 与 Musixmatch 歌词或其任何关联公司或子公司没有任何关联、授权、维护、赞助或认可。</li><li>此应用程序的维护者呼吁其用户个人负责以公平的方式使用此功能，正如其旨在遵守 Musixmatch 歌词实施的版权。</li>",
+    "implementationNotice": "实现来自 Fashni 的 <Hyperlink/>。",
+    "hyperlinkTitle": "MxLRC Github 仓库",
+    "contactAboutComplaints": "如果您有任何投诉，可以通过 Nora Discord 服务器或我的 <Hyperlink>电子邮件</Hyperlink> 与我联系。"
+  },
+
+  "musixmatchSettingsPrompt": {
+    "title": "Musixmatch 设置",
+    "message": "<li>Musixmatch 需要用户令牌才能正常提供服务。</li><li>由于长时间使用同一令牌的服务，Musixmatch 有时可能无法显示歌词。</li><li>请遵循 <Hyperlink>Spicetify Wiki</Hyperlink> 的指南获取新的 Musixmatch 令牌。</li>",
+    "showToken": "显示令牌",
+    "hideToken": "隐藏令牌",
+    "updateToken": "更新令牌",
+    "tokenUpdateSuccess": "令牌更新成功。",
+    "tokenUpdateFailed": "更新令牌失败。",
+    "tokenMissingCharacters": "令牌应为包含 54 个字符的字符串。（还需要 {{count}} 个字符）。",
+    "tokenIncorrectCharacters": "令牌应仅包含字母数字字符。",
+    "savedTokenAvailableMessage": "<Title><span/> 已有已保存的令牌。</Title><p> Nora 中已有一个用户保存的有效 Musixmatch 令牌。</p> <p> 只有当服务无法正常运行时，您才需要更改令牌。</p>"
+  },
+
+  "customizeSelectedMetadataPrompt": {
+    "selected": "已选择",
+    "select": "选择",
+    "title": "自定义 `{{title}}` 的已下载元数据",
+    "selectArtwork": "选择封面",
+    "noArtworksFound": "未找到封面",
+    "customizeOtherMetadata": "自定义其他元数据",
+    "syncedLyricsAvailable": "有同步歌词",
+    "unsyncedLyricsAvailable": "有非同步歌词",
+    "addOnlySelected": "仅添加选定的",
+    "addAll": "添加全部"
+  },
+
+  "resetTagsToDefaultPrompt": {
+    "changed": "已更改",
+    "title": "确认在将歌曲数据重置为默认值之前",
+    "description": "您确定要重置歌曲数据吗？您将丢失在此屏幕上编辑的数据。",
+    "resetToDefault": "重置为默认值"
+  },
+
+  "songMetadataResultSelectPrompt": {
+    "title": "与 <span/> 相关的结果"
+  },
+
+  "errorPrompt": {
+    "title": "发生错误",
+    "sendErrorInfo": "请向我们 <Hyperlink1>发送反馈</Hyperlink1> 以改进应用，或在 Github 上 <Hyperlink2>创建问题</Hyperlink2>。"
+  },
+
+  "openLinkConfirmPrompt": {
+    "description": "您正尝试打开一个将带您到 <span/> 的链接。<br/> 此链接将从您的默认浏览器中打开。",
+    "doNotVerifyLink": "尝试打开链接时不要验证。",
+    "openLink": "打开链接"
+  },
+
+  "songUnplayableErrorPrompt": {
+    "title": "无法播放歌曲",
+    "description": "看起来我们无法播放这首歌曲。请检查所选歌曲是否在您的系统中可用并且应用程序可以访问。"
+  },
+
+  "unsupportedFileMessagePrompt": {
+    "title": "不支持的音频文件",
+    "description": "您正在尝试打开扩展名为 <span/> 的文件，本应用不支持该文件。<br/> 目前，我们仅支持以下音频格式。 <div/>"
+  },
+
+  "duplicateArtistsSuggestion": {
+    "message": "<div><p><span/> 是同一位艺术家吗？</p><p>如果是，您可以将他们的内容链接到一个艺术家，或者您可以忽略此建议。</p></div>",
+    "linkToArtist": "链接到 {{name}}"
+  },
+
+  "separateArtistsSuggestion": {
+    "message": "<div><p><span/> 是 {{count}} 位独立的艺术家吗？</p><p>如果是，您可以通过将他们选择为独立的艺术家来组织他们，或者您可以忽略此建议。</p></div>",
+    "separateAsArtists": "分离为 {{count}} 位艺术家"
+  },
+
+  "featArtistsSuggestion": {
+    "message_one": "<p><span/> 是这首歌的特色艺术家吗？</p><p>如果是，您可以将该艺术家添加为歌曲的艺术家，或者您可以忽略此建议。</p>",
+    "message_other": "<p><span/> 是这首歌的 {{count}} 位特色艺术家吗？</p><p>如果是，您可以将这些艺术家添加为歌曲的艺术家，或者您可以忽略此建议。</p>",
+    "featArtistsTitleReset": "将艺术家添加到歌曲后，从歌曲标题中删除特色艺术家信息。",
+    "addArtistsToSong": "添加 $t(common.artistWithCount, {\"count\":{{count}}}) 到歌曲",
+    "editInMetadataEditingPage": "在元数据编辑页面中编辑",
+    "modificationNotice": "请记住，将特色艺术家添加到歌曲会更新媒体库中的歌曲数据以及歌曲元数据。"
+  },
+
+  "biography": {
+    "readMore": "阅读更多...",
+    "readMoreInLastFm": "在 LastFM 阅读更多",
+    "aboutName": "关于 <span/>",
+    "goToTagInLastFm": "前往 LastFM 中的 {{name}} 标签"
+  },
+
+  "notifications": {
+    "clearAll": "清除全部",
+    "playingNext": "`{{title}}` 将是下一首播放的歌曲。",
+    "songBlacklisted": "`{{title}}` 已加入黑名单。",
+    "playingNextSongsWithCount": "$t(common.songWithCount, {\"count\":{{count}}}) 将是下一首播放的歌曲。",
+    "addedToQueue": "已将 $t(common.songWithCount, {\"count\":{{count}}}) 添加到队列",
+    "suggestionIgnored": "建议已忽略。",
+    "songRestoreSuccess": "歌曲恢复成功。",
+    "songDataUpdateFailed": "歌曲数据更新失败。",
+    "noSongDataEdits": "您没有更改任何歌曲数据。",
+    "selectASongToPlay": "选择一首歌曲播放",
+    "alreadyInPage": "您已在此页面中。",
+    "playbackRateChanged": "播放速度已更改为 {{val}} x",
+    "playbackRateReset": "播放速度已重置为 1x",
+    "playbackPausedDueToSongDeletion": "当前歌曲播放已暂停，因为歌曲已被删除。",
+    "languageChanged": "应用语言更改成功。"
+  },
+
+  "backend": {
+    "RESYNC_SUCCESSFUL": "媒体库重新同步成功。",
+    "RESET_SUCCESSFUL": "应用重置成功，现在正在重启。",
+    "RESET_FAILED": "重置应用失败。正在重新加载应用。",
+    "APP_THEME_CHANGE": "系统主题更改为 {{theme}}",
+    "SONG_REMOVE_PROCESS_UPDATE": "已移除 {{total}} 首歌曲中的 {{value}} 首。",
+    "OPEN_SONG_IN_EXPLORER_FAILED": "在资源管理器中打开歌曲文件失败，因为在媒体库中找不到歌曲。",
+    "PENDING_METADATA_UPDATES_SAVED": "成功保存了 `{{title}}` 的待处理元数据更新。",
+    "METADATA_UPDATE_FAILED": "元数据更新失败。{{message}}",
+    "SONG_EXT_NOT_SUPPORTED_FOR_LYRICS_SAVES": "歌词无法保存，因为当前歌曲扩展名 ({{ext}}) 不支持修改元数据。",
+    "LASTFM_LOGIN_SUCCESS": "您已成功登录 LastFM。",
+    "AUDIO_PARSING_PROCESS_UPDATE": "已完成 {{total}} 首歌曲中的 {{value}} 首。",
+    "SONG_PALETTE_GENERATING_PROCESS_UPDATE": "正在为 {{total}} 首歌曲中的 {{value}} 首生成调色板。",
+    "GENRE_PALETTE_GENERATING_PROCESS_UPDATE": "正在为 {{total}} 个流派中的 {{value}} 个生成调色板。",
+    "LYRICS_FIND_FAILED": "我们找不到 `{{title}}` 的歌词",
+    "LYRICS_TRANSLATION_SUCCESS": "歌词翻译成功",
+    "LYRICS_CONVERT_SUCCESS": "歌词转换成功",
+    "RESET_CONVERTED_LYRICS_SUCCESS": "歌词重置成功",
+    "LYRICS_TRANSLATION_FAILED": "翻译歌词失败",
+    "LYRICS_TRANSLATION_TO_SAME_SOURCE_LANGUAGE": "请求将歌词翻译为与源语言相同的语言 '{{language}}'",
+    "LYRICS_CONVERT_FAILED": "转换歌词失败",
+    "RESET_CONVERTED_LYRICS_FAILED": "重置歌词失败",
+    "MUSIC_FOLDER_DELETED": "`{{name}}` 文件夹已从系统中删除。与该文件夹相关的 $t(common.songWithCount, {\"count\":{{count}}}) 将从媒体库中移除。",
+    "EMPTY_MUSIC_FOLDER_DELETED": "`{{name}}` 文件夹已从系统中删除。未找到与该文件夹相关的歌曲。媒体库将不受影响。",
+    "WHITELISTING_FOLDER_FAILED_DUE_TO_BLACKLISTED_PARENT_FOLDER": "无法将 `{{folderName}}` 文件夹加入白名单，因为其父文件夹 '{{parentFolderName}}' 也已加入黑名单。请将父文件夹加入白名单以将此文件夹加入白名单。",
+    "WHITELISTING_SONG_FAILED_DUE_TO_BLACKLISTED_DIRECTORY": "无法将 '{{songName}}' 加入白名单，因为其目录 '{{directoryName}}' 也已加入黑名单。请将目录加入白名单以将此歌曲加入白名单。",
+    "SONG_WHITELISTED": "$t(common.songWithCount, {\"count\":{{count}}}) 已从黑名单恢复。",
+    "ARTWORK_SAVED": "封面已保存到请求的位置。",
+    "DESTINATION_NOT_SELECTED": "未选择保存目标。",
+    "ARTWORK_SAVE_FAILED": "保存封面失败。",
+    "PLAYBACK_FROM_UNKNOWN_SOURCE": "您正在播放媒体库之外的歌曲。",
+    "ARTIST_DISLIKE": "`{{name}}` 已从收藏夹中移除。",
+    "ARTIST_LIKE": "`{{name}}` 已添加到收藏夹。",
+    "SONG_DISLIKE": "`{{name}}` 已从收藏夹中移除。",
+    "SONG_LIKE": "`{{name}}` 已添加到收藏夹。",
+    "SONG_DELETED": "`{{name}}` 歌曲已从系统中删除。",
+    "FOLDER_PARSED_FOR_DIRECTORIES": "在 $t(folder.selectedFolderCount, {\"count\":{{folderCount}}}) 中找到 $t(folder.directoryCount, {\"count\":{{count}}})。",
+    "NO_MORE_SONG_PALETTES": "没有更多歌曲调色板可生成。",
+    "NO_MORE_GENRE_PALETTES": "没有更多流派调色板可生成。",
+    "PARSE_FAILED": "`{{name}}` 在尝试将歌曲添加到媒体库时失败。请前往设置重新同步媒体库。",
+    "PARSE_SUCCESSFUL": "`{{name}}` 歌曲已添加到媒体库。",
+    "LYRICS_SAVE_QUEUED": "`{{title}}` 的歌词将自动保存。",
+    "LYRICS_SAVED_IN_LRC_FILE": "`{{ext}}` 扩展名的这首歌的歌词将保存在 LRC 文件中。",
+    "PENDING_LYRICS_SAVED": "成功保存了 `{{title}}` 的待处理歌词。",
+    "ADDED_SONGS_TO_PLAYLIST": "已成功将 $t(common.songWithCount, {\"count\":{{count}}}) 添加到 `{{name}}`。",
+    "APPDATA_IMPORT_STARTED": "开始导入应用数据。请稍候...",
+    "APPDATA_IMPORT_SUCCESS": "应用数据导入成功。",
+    "APPDATA_IMPORT_SUCCESS_WITH_PENDING_RESTART": "$t(backend.APPDATA_IMPORT_SUCCESS) 正在 5 秒后重启应用。",
+    "APPDATA_IMPORT_FAILED": "导入应用数据失败。",
+    "APPDATA_IMPORT_FAILED_DUE_TO_MISSING_FILES": "$t(backend.APPDATA_IMPORT_FAILED) 选定的文件夹中缺少所需的文件。",
+    "APPDATA_EXPORT_STARTED": "开始导出应用数据。请稍候...",
+    "APPDATA_EXPORT_SUCCESS": "应用数据导出成功。",
+    "APPDATA_EXPORT_FAILED": "导出应用数据时发生错误。",
+    "PLAYLIST_EXPORT_SUCCESS": "成功导出 `{{name}}` 播放列表。",
+    "PLAYLIST_EXPORT_FAILED": "导出 `{{name}}` 播放列表时发生错误。",
+    "PLAYLIST_IMPORT_SUCCESS": "成功导入 `{{name}}` 播放列表。",
+    "PLAYLIST_IMPORT_FAILED": "导入播放列表失败。",
+    "PLAYLIST_IMPORT_FAILED_DUE_TO_SONGS_OUTSIDE_LIBRARY": "导入播放列表时发现 $t(common.songWithCount, {\"count\":{{count}}}) 位于媒体库之外，这是不支持的。",
+    "PLAYLIST_IMPORT_FAILED_DUE_TO_INVALID_FILE_DATA": "由于用户选择了包含无效文件数据的文件，导入播放列表失败。",
+    "PLAYLIST_IMPORT_FAILED_DUE_TO_INVALID_FILE_EXTENSION": "播放列表导入失败，因为选择的文件类型不是 '.m3u8'。",
+    "PLAYLIST_IMPORT_TO_EXISTING_PLAYLIST": "已将 $t(common.songWithCount, {\"count\":{{count}}}) 导入到现有 `{{name}}` 播放列表。",
+    "PLAYLIST_IMPORT_TO_EXISTING_PLAYLIST_FAILED": "将歌曲导入到现有播放列表时发生错误。",
+    "PLAYLIST_CREATION_FAILED": "创建播放列表失败。",
+    "PLAYLIST_RENAME_SUCCESS": "播放列表重命名成功。",
+    "PLAYLIST_NOT_FOUND": "未找到播放列表。",
+    "SONG_REPARSE_SUCCESS": "成功重新解析 `{{title}}`。",
+    "SONG_REPARSE_FAILED": "重新解析歌曲时发生错误。"
+  },
+
+  "discordrpc": {
+    "noraOnGitHub": "GitHub 上的 Nora",
+    "untitledSong": "一首无标题歌曲",
+    "unknownArtist": "一位未知艺术家",
+    "playingASong": "正在播放歌曲"
+  }
+}
