@@ -437,6 +437,8 @@
     "showArtistArtworkNearSongControls": "在艺术家姓名旁边显示可用的艺术家封面 (左下角)。",
     "disableBackgroundArtworksDescription": "禁用在某些页面背景上显示的较大封面。",
     "disableBackgroundArtworks": "禁用背景封面",
+    "disableDefaultArtworksDescription": "当歌曲、专辑、艺人或播放列表没有封面图片时，隐藏默认的占位封面。",
+    "disableDefaultArtworks": "隐藏默认占位封面",
     "playlistArtworksDescription": "更改由歌曲封面制作的封面的行为。",
     "enablePlaylistArtworks": "启用由歌曲封面制作的播放列表封面",
     "shuffleArtworkFromSongCovers": "启用随机播放由歌曲封面制作的封面。（每次页面刷新时封面都会随机切换。）",

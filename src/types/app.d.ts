@@ -504,6 +504,7 @@ declare global {
     showSongRemainingTime: boolean;
     showArtistArtworkNearSongControls: boolean;
     disableBackgroundArtworks: boolean;
+    disableDefaultArtworks: boolean;
     noUpdateNotificationForNewUpdate: string;
     defaultPageOnStartUp: DefaultPages;
     enableArtworkFromSongCovers: boolean;

@@ -3,6 +3,8 @@
 import { type MouseEvent as ReactMouseEvent, memo, useRef } from 'react';
 import log from '../utils/log';
 import DefaultImage from '../assets/images/webp/song_cover_default.webp';
+import { useStore } from '@tanstack/react-store';
+import { store } from '@renderer/store';
 
 interface ImgProperties {
   width: number;
@@ -72,12 +74,20 @@ type ImgProps = {
   />
 </picture>; */
 
+const TRANSPARENT_PIXEL =
+  'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';
+
 const Img = memo((props: ImgProps) => {
+  const disableDefaultArtworks = useStore(
+    store,
+    (state) => state.localStorage.preferences.disableDefaultArtworks
+  );
+
   const {
     src,
     alt = '',
     className,
-    fallbackSrc = DefaultImage,
+    fallbackSrc: fallbackSrcProp,
     noFallbacks = false,
     onClick = () => true,
     loading = 'eager',
@@ -89,8 +99,10 @@ const Img = memo((props: ImgProps) => {
     enableImgFadeIns = true
   } = props;
 
+  const fallbackSrc = disableDefaultArtworks ? TRANSPARENT_PIXEL : fallbackSrcProp ?? DefaultImage;
+
   const imgRef = useRef<HTMLImageElement>(null);
-  const imgPropsRef = useRef<ImgProperties>();
+  const imgPropsRef = useRef<ImgProperties | undefined>(undefined);
   const errorCountRef = useRef(0);
   const isFirstTimeRef = useRef(true);
 
@@ -111,14 +123,14 @@ const Img = memo((props: ImgProps) => {
           errorCountRef.current += 1;
           if (!noFallbacks && e.currentTarget.src !== fallbackSrc)
             e.currentTarget.src = fallbackSrc;
-          else e.currentTarget.src = DefaultImage;
+          else e.currentTarget.src = disableDefaultArtworks ? TRANSPARENT_PIXEL : DefaultImage;
         } else {
           log(
             'maximum img fetch error count reached.',
             { src, fallbackSrc, props: imgPropsRef.current },
             'WARN'
           );
-          e.currentTarget.src = DefaultImage;
+          e.currentTarget.src = disableDefaultArtworks ? TRANSPARENT_PIXEL : DefaultImage;
         }
       }}
       onClick={onClick}

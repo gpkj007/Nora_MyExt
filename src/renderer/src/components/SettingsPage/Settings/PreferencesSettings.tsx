@@ -79,6 +79,22 @@ const PreferencesSettings = () => {
         </li>
 
         <li className="checkbox-container">
+          <div className="secondary-container disable-default-artworks mb-4">
+            <div className="description">
+              {t('settingsPage.disableDefaultArtworksDescription')}
+            </div>
+            <Checkbox
+              id="disableDefaultArtworks"
+              isChecked={preferences?.disableDefaultArtworks}
+              checkedStateUpdateFunction={(state) =>
+                storage.preferences.setPreferences('disableDefaultArtworks', state)
+              }
+              labelContent={t('settingsPage.disableDefaultArtworks')}
+            />
+          </div>
+        </li>
+
+        <li className="checkbox-container">
           <div className="secondary-container enable-artwork-from-song-covers mb-4">
             <div className="description">{t('settingsPage.playlistArtworksDescription')}</div>
             <Checkbox

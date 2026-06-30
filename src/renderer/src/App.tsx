@@ -111,6 +111,7 @@ export default function App() {
 
   const [, startTransition] = useTransition();
   const refStartPlay = useRef(false);
+  const pendingSeekPosition = useRef(0);
 
   const { isOnline } = useNetworkConnectivity();
 
@@ -367,6 +368,10 @@ export default function App() {
     };
     const playSongIfPlayable = () => {
       if (refStartPlay.current) toggleSongPlayback(true);
+      if (pendingSeekPosition.current > 0) {
+        updateSongPosition(pendingSeekPosition.current);
+        pendingSeekPosition.current = 0;
+      }
     };
     // const managePlayerStalledStatus = () => {
     //   dispatch({ type: 'PLAYER_WAITING_STATUS', data: true });
@@ -886,6 +891,7 @@ export default function App() {
 
               storage.playback.setCurrentSongOptions('songId', songData.songId);
 
+              pendingSeekPosition.current = 0;
               player.src = `${songData.path}?ts=${Date.now()}`;
 
               const trackChangeEvent = new CustomEvent('player/trackchange', {
@@ -1193,6 +1199,16 @@ export default function App() {
   /*const updateSongPosition = useCallback((position: number) => {
     if (position >= 0 && position <= player.duration) player.currentTime = position;
   }, []);*/
+  const saveCurrentPlaybackProgress = useCallback(() => {
+    // 获取当前的播放位置
+    const songPosition = player.currentTime;
+    // 派发 Action 来保存当前播放列表的进度
+    dispatch({
+      type: 'SAVE_CURRENT_PLAYBACK_PROGRESS',
+      data: songPosition
+    });
+  }, [dispatch, player]); // 依赖 dispatch 和 player
+
   const updateSongPosition = useCallback(
       (position: number) => {
         // 动作 1：更新 Reducer 状态（供 UI 显示）
@@ -1217,7 +1233,6 @@ export default function App() {
       initialSongId?: string, // 👈 新增参数
       initialPosition = 0 // 👈 新增参数，默认值为 0
     ) => {
-      // 确保这个方法在依赖项中
       saveCurrentPlaybackProgress();
 
       let currentSongIndex = 0;
@@ -1266,19 +1281,20 @@ export default function App() {
         console.log(`[playSong] 进度为: ${initialPosition}`);
         // 设置播放位置。
         if (initialPosition > 0) {
-          updateSongPosition(initialPosition);
+          // 延迟到 canplay 事件后再设置，避免音频未准备好时设置无效
+          pendingSeekPosition.current = initialPosition;
         } else {
           updateSongPosition(0);
         }
       }
     },
-      // 💥 修正 2：添加所有缺失的依赖项
       [
         dispatch,
         toggleShuffling,
-        shuffleQueueRandomly, // 或您实际使用的 shuffle 函数
-        playSong, // 启动播放
-        updateSongPosition, // 设置播放位置
+        shuffleQueueRandomly,
+        playSong,
+        updateSongPosition,
+        saveCurrentPlaybackProgress,
       ]
   );
 
@@ -1336,16 +1352,6 @@ export default function App() {
     },
     [playSong, shuffleQueue, toggleShuffling]
   );
-
-  const saveCurrentPlaybackProgress = useCallback(() => {
-    // 获取当前的播放位置
-    const songPosition = player.currentTime;
-    // 派发 Action 来保存当前播放列表的进度
-    dispatch({
-      type: 'SAVE_CURRENT_PLAYBACK_PROGRESS',
-      data: songPosition
-    });
-  }, [dispatch, player]); // 依赖 dispatch 和 player
 
   const updateCurrentSongPlaybackState = useCallback((isPlaying: boolean) => {
     if (isPlaying !== store.state.player.isCurrentSongPlaying)

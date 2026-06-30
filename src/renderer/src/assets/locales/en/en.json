@@ -430,6 +430,8 @@
     "showArtistArtworkNearSongControls": "Show available artist artworks next to their name (bottom left).",
     "disableBackgroundArtworksDescription": "Disables the large artworks shown on the background of some pages.",
     "disableBackgroundArtworks": "Disable background artworks",
+    "disableDefaultArtworksDescription": "Hides default placeholder artworks when a song, album, artist, or playlist has no cover image.",
+    "disableDefaultArtworks": "Hide default placeholder artworks",
     "playlistArtworksDescription": "Change the behavior of artworks made from song covers.",
     "enablePlaylistArtworks": "Enable artworks made from song covers on playlists",
     "shuffleArtworkFromSongCovers": "Enable shuffling the artwork made from song covers. (The artworks shuffle each time a page refresh happens.)",
