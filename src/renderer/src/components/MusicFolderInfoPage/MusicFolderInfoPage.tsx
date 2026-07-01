@@ -198,7 +198,13 @@ const MusicFolderInfoPage = () => {
                 key={1}
                 className="select-btn text-sm md:text-lg md:[&>.button-label-text]:hidden md:[&>.icon]:mr-0"
                 iconName={isMultipleSelectionEnabled ? 'remove_done' : 'checklist'}
-                clickHandler={() => toggleMultipleSelections(!isMultipleSelectionEnabled, 'songs')}
+                clickHandler={() => {
+                  if (isMultipleSelectionEnabled) toggleMultipleSelections(false, 'songs');
+                  else {
+                    const allSongIds = folderSongs.map((song) => song.songId);
+                    toggleMultipleSelections(true, 'songs', allSongIds, true);
+                  }
+                }}
                 tooltipLabel={t(`common.${isMultipleSelectionEnabled ? 'unselectAll' : 'select'}`)}
               />
               <Button
